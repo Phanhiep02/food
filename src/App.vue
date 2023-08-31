@@ -1,26 +1,20 @@
 <template>
-  <header>
-    <div class="container">
-      <div class="inner">header</div>
-    </div>
-  </header>
+  <!-- header -->
+  <compHeader></compHeader>
   <router-view></router-view>
   <!-- footer -->
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="inner">footer</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <compFooter></compFooter>
 </template>
 
 <script>
+import compHeader from "./components/compHeader.vue";
+import compFooter from "./components/compFooter.vue";
 export default {
   name: "App",
-  components: {},
+  components: {
+    compHeader,
+    compFooter,
+  },
 };
 </script>
 
