@@ -3,6 +3,7 @@ import pagesSearch from "../pages/pagesSearchResult";
 import pagesHome from "../pages/pagesHome";
 import pagesRestaurantDetail from "../pages/pagesRestaurantDetail";
 import pagesFoodDetail from "../pages/pagesFoodDetail";
+import pagesCartPage from "../pages/pagesCartPage";
 import pagesAbout from "../pages/pagesAbout";
 import pagesBlog from "../pages/pagesBlog";
 import pagesBlogPost from "../pages/pagesBlogPost";
@@ -17,6 +18,7 @@ const routes = [
   { path: "/1", component: pagesSearch },
   { path: "/2", component: pagesRestaurantDetail },
   { path: "/3", component: pagesFoodDetail },
+  { path: "/4", component: pagesCartPage },
   { path: "/about", component: pagesAbout },
   { path: "/blog", component: pagesBlog },
   { path: "/blog-post", component: pagesBlogPost },
