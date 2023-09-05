@@ -237,7 +237,24 @@
           <div class="restaurant__body">
             <div class="restaurant__body-title">
               <h5>120 Restaurants Near Austin, TX</h5>
-              <p class="restaurant__body-sort">Sort By:</p>
+              <p class="restaurant__body-sort">
+                Sort By:
+
+                <el-dropdown>
+                  <el-button class="sort__btn">
+                    Popular<el-icon class="el-icon--right"
+                      ><arrow-down
+                    /></el-icon>
+                  </el-button>
+                  <template #dropdown>
+                    <el-dropdown-menu>
+                      <el-dropdown-item>Popular</el-dropdown-item>
+                      <el-dropdown-item>Recommended</el-dropdown-item>
+                      <el-dropdown-item>Distance</el-dropdown-item>
+                    </el-dropdown-menu>
+                  </template>
+                </el-dropdown>
+              </p>
             </div>
             <!-- content -->
             <div class="restaurant__content">
@@ -595,6 +612,7 @@ export default {
 /* body */
 .restaurant__body-left {
   width: 262px;
+  margin-top: 44px;
 }
 .restaurant__body {
   margin-top: 45px;
@@ -705,5 +723,19 @@ export default {
   display: flex;
   align-items: center;
   column-gap: 6px;
+}
+.sort__btn {
+  background: #fff;
+  border-color: #333;
+  color: var(--Dark, #191720);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.667;
+}
+.sort__btn:hover {
+  background: #fff;
+  color: #333;
+  border-color: none;
+  outline: none;
 }
 </style>
