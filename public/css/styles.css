@@ -945,7 +945,8 @@ button {
   display: flex;
   column-gap: 30px;
 }
-.footer__social .footer__social-link {
+.footer__social .footer__social-link,
+.blog-post__social-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -956,7 +957,8 @@ button {
   background: var(--Dark);
   cursor: pointer;
 }
-.footer__social-link:hover {
+.footer__social-link:hover,
+.blog-post__social-link:hover {
   background-color: var(--purple-primary);
 }
 .footer__right {
