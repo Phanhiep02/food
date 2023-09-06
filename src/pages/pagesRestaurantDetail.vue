@@ -725,8 +725,11 @@
 .restaurant__detail-list {
   width: 270px;
   border-radius: 12px;
+}
+.restaurant__detail-list:hover {
   background: var(--White, #fff);
   box-shadow: 0px 20px 70px 0px rgba(27, 12, 84, 0.07);
+  cursor: pointer;
 }
 .restaurant__detail-item {
   width: 246px;
