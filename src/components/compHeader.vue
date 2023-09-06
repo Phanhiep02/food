@@ -41,6 +41,10 @@
         </ul>
         <!-- action -->
         <div class="header__action">
+          <div class="header__cart">
+            <img src="../assets/img/cart.svg" alt="" class="header__cart-img" />
+            <p class="header__cart-quantity">0</p>
+          </div>
           <a href="" class="btn__sign-in">Sign In</a>
           <a href="" class="btn btn__sign-up">Sign Up</a>
         </div>
@@ -50,7 +54,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {};
+  },
+};
 </script>
 
 <style></style>
