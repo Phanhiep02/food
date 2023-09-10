@@ -121,6 +121,7 @@ export default {};
   margin-bottom: 55px;
 }
 .contact__top-title {
+  margin-bottom: 38px;
   color: var(--Dark, #191720);
   text-align: center;
   font-size: 4.4rem;

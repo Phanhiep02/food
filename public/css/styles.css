@@ -81,6 +81,9 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+.header__inner img {
+  cursor: pointer;
+}
 .nav__list {
   display: flex;
   column-gap: 48px;
@@ -362,11 +365,12 @@ button {
   border-radius: 12px;
   background: var(--White, #fff);
   box-shadow: 0px 20px 70px 0px rgba(27, 12, 84, 0.07);
-  cursor: pointer;
 }
 .services__item:hover .services__item-explore {
+  cursor: pointer;
   color: var(--purple-primary);
 }
+
 .services__item-img {
   width: 100px;
   height: 100px;
@@ -574,9 +578,9 @@ button {
   border-radius: 12px;
   background: var(--White, #fff);
   box-shadow: 0px 20px 70px 0px rgba(27, 12, 84, 0.07);
-  cursor: pointer;
 }
 .features__content:hover .features__content-btn {
+  cursor: pointer;
   background-color: var(--purple-primary);
 }
 .features__item {
@@ -839,9 +843,6 @@ button {
   line-height: 1.71;
 }
 
-.testimonial__content:hover {
-  cursor: pointer;
-}
 .testimonial__content:hover .testimonial__content-title {
   color: var(--purple-primary);
   cursor: pointer;

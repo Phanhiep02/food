@@ -98,7 +98,12 @@
                 Find deals, free delivery, and more from our restaurant
                 partners.
               </p>
-              <a href="" class="services__item-explore">Explore</a>
+              <router-link
+                to="restaurant"
+                href=""
+                class="services__item-explore"
+                >Explore</router-link
+              >
             </div>
           </div>
         </div>
@@ -196,7 +201,9 @@
               Want to be more specific? Search by cuisine, restaurant name or
               menu item. We'll filter your results accordingly.
             </p>
-            <button class="btn about-foodeats__btn">Learn More</button>
+            <router-link to="about">
+              <button class="btn about-foodeats__btn">Learn More</button>
+            </router-link>
           </div>
         </div>
       </div>
@@ -232,7 +239,9 @@
                 Sign up today, start earning tomorrow. Build a new career in
                 delivery service with us.
               </p>
-              <a href="" class="btn features__content-btn">Learn More</a>
+              <router-link to="restaurant" class="btn features__content-btn"
+                >Learn More</router-link
+              >
             </div>
           </div>
         </div>
@@ -249,7 +258,9 @@
                 Sign up today, start earning tomorrow. Build a new career in
                 delivery service with us.
               </p>
-              <a href="" class="btn features__content-btn">Learn More</a>
+              <router-link to="restaurant" class="btn features__content-btn"
+                >Learn More</router-link
+              >
             </div>
           </div>
         </div>
@@ -278,7 +289,12 @@
                 Meals while traveling
               </li>
             </ul>
-            <a href="" class="btn features__footer-btn">Get Started Now</a>
+            <router-link
+              to="restaurant"
+              href=""
+              class="btn features__footer-btn"
+              >Get Started Now</router-link
+            >
           </div>
         </div>
         <div class="col-lg-6 offset-lg-1 col-sm-12">
@@ -345,20 +361,20 @@
       <div class="row">
         <div class="col">
           <div class="cta__app">
-            <a href="" class="cta__app-link">
+            <router-link to="coming" class="cta__app-link">
               <img
                 src="../assets/img/cta-google.svg"
                 alt=""
                 class="cta__app-img"
               />
-            </a>
-            <a href="" class="cta__app-link">
+            </router-link>
+            <router-link to="coming" href="" class="cta__app-link">
               <img
                 src="../assets/img/cta-store.svg"
                 alt=""
                 class="cta__app-img"
               />
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
@@ -402,7 +418,11 @@
                   for being awesome!
                 </p>
                 <span class="testimonial__content-span"></span>
-                <h6 class="testimonial__content-title">Peter Moor</h6>
+                <router-link to="blog"
+                  ><h6 class="testimonial__content-title">
+                    Peter Moor
+                  </h6></router-link
+                >
                 <p class="desc testimonial__content-descSub">UI/UX Designer</p>
               </div>
             </div>
@@ -429,7 +449,11 @@
                   for being awesome!
                 </p>
                 <span class="testimonial__content-span"></span>
-                <h6 class="testimonial__content-title">Peter Moor</h6>
+                <router-link to="blog"
+                  ><h6 class="testimonial__content-title">
+                    Peter Moor
+                  </h6></router-link
+                >
                 <p class="desc testimonial__content-descSub">UI/UX Designer</p>
               </div>
             </div>
@@ -456,7 +480,11 @@
                   for being awesome!
                 </p>
                 <span class="testimonial__content-span"></span>
-                <h6 class="testimonial__content-title">Peter Moor</h6>
+                <router-link to="blog"
+                  ><h6 class="testimonial__content-title">
+                    Peter Moor
+                  </h6></router-link
+                >
                 <p class="desc testimonial__content-descSub">UI/UX Designer</p>
               </div>
             </div>

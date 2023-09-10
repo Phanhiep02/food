@@ -1,18 +1,15 @@
 <template>
   <!-- header -->
-  <compHeader></compHeader>
   <router-view></router-view>
   <!-- footer -->
   <compFooter></compFooter>
 </template>
 
 <script>
-import compHeader from "./components/compHeader.vue";
 import compFooter from "./components/compFooter.vue";
 export default {
   name: "App",
   components: {
-    compHeader,
     compFooter,
   },
 };

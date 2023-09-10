@@ -11,7 +11,11 @@
                 pickup.
               </p>
               <div class="footer__social">
-                <a class="footer__social-link">
+                <a
+                  :href="facebookProfileURL"
+                  target="_blank"
+                  class="footer__social-link"
+                >
                   <img src="../assets/img/facebook.svg" alt="" />
                 </a>
                 <a class="footer__social-link">
@@ -127,7 +131,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    facebookProfileURL() {
+      return "https://www.facebook.com/profile.php?id=100006048614931";
+    },
+  },
+};
 </script>
 
 <style></style>

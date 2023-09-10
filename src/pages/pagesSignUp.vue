@@ -1,4 +1,16 @@
 <template>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__sign-title">
+          <router-link to="/">
+            <img src="../assets/icon/logo.svg" alt="" />
+          </router-link>
+          <h2 class="title__sign-up">Sign Up</h2>
+        </div>
+      </div>
+    </div>
+  </header>
   <section class="sign-mt">
     <div class="container">
       <div class="row">
@@ -59,11 +71,15 @@
               </div>
 
               <div class="form-group">
-                <button class="btn submit-btn" type="submit">Sign Up</button>
+                <button class="btn submit-btn mt-btn" type="submit">
+                  Sign Up
+                </button>
               </div>
             </form>
             <p class="sign-up__footer desc">
-              Have an account?<a href=""> Sign in </a>
+              Have an account?<router-link to="sign-in" href="">
+                Sign in
+              </router-link>
             </p>
           </div>
         </div>
@@ -77,13 +93,24 @@ export default {};
 </script>
 
 <style scoped>
+.header__sign-title {
+  display: flex;
+  align-items: center;
+}
+.title__sign-up {
+  color: var(--Dark, #191720);
+  margin-left: 60px;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 36px;
+}
 .sign-up-hero__right {
   padding-top: 46px;
 }
 .sign-mt {
   /* margin-top: 12px; */
   background: #fffae3;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   padding-bottom: 9px;
 }
 .sign-up {
@@ -179,5 +206,8 @@ form {
 /* xử lý nhập sai mới hiện , còn ko có plavceholder chưa nhập gì vẫn hiện */
 .form-group:has(:invalid:not(:placeholder-shown)) .error {
   display: block;
+}
+.submit-btn.mt-btn {
+  margin-top: 68px;
 }
 </style>

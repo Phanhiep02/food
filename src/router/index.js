@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import pagesSearch from "../pages/pagesSearchResult";
 import pagesHome from "../pages/pagesHome";
+import pagesHomePage from "../pages/pagesHomePage";
 import pagesRestaurantDetail from "../pages/pagesRestaurantDetail";
 import pagesFoodDetail from "../pages/pagesFoodDetail";
 import pagesCartPage from "../pages/pagesCartPage";
@@ -14,28 +15,43 @@ import pagesComingSoon from "../pages/pagesComingSoon";
 import pagesSignIn from "../pages/pagesSignIn";
 import pagesSignUp from "../pages/pagesSignUp";
 const routes = [
-  { path: "/", component: pagesHome },
-  { path: "/1", component: pagesSearch },
-  { path: "/2", component: pagesRestaurantDetail },
-  { path: "/3", component: pagesFoodDetail },
-  { path: "/4", component: pagesCartPage },
-  { path: "/about", component: pagesAbout },
-  { path: "/blog", component: pagesBlog },
-  { path: "/blog-post", component: pagesBlogPost },
-  { path: "/FAQ", component: pagesFAQ },
-  { path: "/contact", component: pagesContact },
-  { path: "/:pathMatch(.*)*", component: pagesNotFound },
-  { path: "/coming", component: pagesComingSoon },
-  { path: "/sign-in", component: pagesSignIn },
-  { path: "/sign-up", component: pagesSignUp },
+  {
+    path: "/",
+    component: pagesHomePage,
+    children: [
+      { path: "", component: pagesHome },
+      { path: "restaurant", component: pagesSearch, name: "restaurant" },
+      {
+        path: "restaurant-detail",
+        component: pagesRestaurantDetail,
+        name: "restaurant-detail",
+      },
+      {
+        path: "restaurant-detail-food",
+        component: pagesFoodDetail,
+        name: "restaurant-detail-food",
+      },
+      { path: "cart-page", component: pagesCartPage, name: "cart-page" },
+      { path: "about", component: pagesAbout, name: "about" },
+      { path: "blog", component: pagesBlog, name: "blog" },
+      { path: "blog-post", component: pagesBlogPost, name: "blog-post" },
+      { path: "FAQ", component: pagesFAQ, name: "FAQ" },
+      { path: "contact", component: pagesContact, name: "contact" },
+      { path: ":pathMatch(.*)*", component: pagesNotFound },
+      { path: "/coming", component: pagesComingSoon, name: "coming" },
+    ],
+  },
+
+  { path: "/sign-in", component: pagesSignIn, name: "signIn" },
+  { path: "/sign-up", component: pagesSignUp, name: "signUp" },
 ];
 
-// 3. Create the router instance and pass the `routes` option
-// You can pass in additional options here, but let's
-// keep it simple for now.
 const router = createRouter({
-  // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
   history: createWebHashHistory(),
-  routes, // short for `routes: routes`
+  routes,
+  scrollBehavior() {
+    // Kéo trang lên đầu khi chuyển route
+    return { top: 0 };
+  },
 });
 export default router;

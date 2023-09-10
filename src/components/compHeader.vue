@@ -2,14 +2,18 @@
   <header class="header">
     <div class="container">
       <div class="header__inner">
-        <img src="../assets/icon/logo.svg" alt="" />
+        <router-link to="/">
+          <img src="../assets/icon/logo.svg" alt="" />
+        </router-link>
         <!-- nav -->
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="" class="nav__item-link">Get the app</a>
+            <router-link to="coming" href="" class="nav__item-link"
+              >Get the app</router-link
+            >
           </li>
           <li class="nav__item">
-            <a href="" class="nav__item-link">About</a>
+            <router-link to="about" class="nav__item-link">About</router-link>
           </li>
           <li class="nav__item">
             <a href="" class="nav__item-link"
@@ -21,19 +25,29 @@
               />
               <ul class="list__sub">
                 <li class="item__sub">
-                  <a href="" class="sub__link">Blog</a>
+                  <router-link to="blog" href="" class="sub__link"
+                    >Blog</router-link
+                  >
                 </li>
                 <li class="item__sub">
-                  <a href="" class="sub__link">FAQ</a>
+                  <router-link to="FAQ" href="" class="sub__link"
+                    >FAQ</router-link
+                  >
                 </li>
                 <li class="item__sub">
-                  <a href="" class="sub__link">Contact</a>
+                  <router-link to="contact" href="" class="sub__link"
+                    >Contact</router-link
+                  >
                 </li>
                 <li class="item__sub">
-                  <a href="" class="sub__link">404 Page</a>
+                  <router-link to="404-page" href="" class="sub__link"
+                    >404 Page</router-link
+                  >
                 </li>
                 <li class="item__sub">
-                  <a href="" class="sub__link">Coming Soon</a>
+                  <router-link to="coming" href="" class="sub__link"
+                    >Coming Soon</router-link
+                  >
                 </li>
               </ul>
             </a>
@@ -41,12 +55,14 @@
         </ul>
         <!-- action -->
         <div class="header__action">
-          <div class="header__cart">
+          <router-link to="cart-page" class="header__cart">
             <img src="../assets/img/cart.svg" alt="" class="header__cart-img" />
             <p class="header__cart-quantity">0</p>
-          </div>
-          <a href="" class="btn__sign-in">Sign In</a>
-          <a href="" class="btn btn__sign-up">Sign Up</a>
+          </router-link>
+          <router-link to="sign-in" class="btn__sign-in">Sign In</router-link>
+          <router-link to="sign-up" class="btn btn__sign-up"
+            >Sign Up</router-link
+          >
         </div>
       </div>
     </div>
